@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Section 1 */
+.navbar {
+    align-items: center;
+    background-color: #f2f2f2;
+    border-radius: 0px 0px 5px 5px;
+}
+
+li,
+a,
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(28, 26, 26);
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.nav__links {
+    list-style: none;
+
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+
+}
+
+.nav__links li a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+    color: #AAC8A7;
+}
+
+button {
+    padding: 9px 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: #acc6aa;
+    color: white;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+button:hover {
+    background-color: #AAC8A7;
+    color: black;
+
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/*  section 2 */
+
+.About {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-bottom: 1px solid #ccc;
+}
+
+.About .title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+    color: #f2f2f2;
+}
+
+/* Section 3 */
+.about__info {
+    width: 100%;
+    height: 55vh;
+    text-align: center;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #ccc;
+}
+
+.about__info h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    padding-top: 50px;
+}
+
+.about__info .p_i {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    padding-top: 12px;
+}
+
+.about__info .p_ii {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    padding-top: 12px;
+}
+
+/* Section 4 */
+.Events {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Placeholder styles */
+.transition_all_03s {
+    transition: all 0.3s ease;
+}
+
+.backface_visibility_hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+/* Reset and general styling */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Swiper container styles */
+.swiper-container {
+    width: 80%;
+    height: 100vh;
+    float: left;
+    transition: opacity 0.6s ease, transform 0.3s ease;
+}
+
+/* Navigation slider specific styles */
+.swiper-container.nav-slider {
+    width: 20%;
+    padding-left: 5px;
+}
+
+.swiper-container.nav-slider .swiper-slide {
+    cursor: pointer;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+.swiper-container.nav-slider .swiper-slide.swiper-slide-active {
+    opacity: 1;
+}
+
+.swiper-container.nav-slider .swiper-slide .content {
+    width: 100%;
+}
+
+/* Hover effect for navigation buttons */
+.swiper-container:hover .swiper-button-prev,
+.swiper-container:hover .swiper-button-next {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Loading state */
+.swiper-container.loading {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Swiper wrapper styles */
+.swiper-wrapper {
+    /* No additional styles */
+}
+
+/* Swiper slide styles */
+.swiper-slide {
+    overflow: hidden;
+    backface-visibility: hidden;
+}
+
+/* Slide background image */
+.swiper-slide .slide-bgimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Hide entity image */
+.swiper-slide .entity-img {
+    display: none;
+}
+
+/* Slide content styles */
+.swiper-slide .content {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 50%;
+    padding-left: 5%;
+    color: #fff;
+}
+
+/* Slide title styles */
+.swiper-slide .content .title {
+    font-size: 2.6em;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Slide caption styles */
+.swiper-slide .content .caption {
+    display: block;
+    font-size: 13px;
+    line-height: 1.4;
+    transform: translateX(50px);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.7s ease;
+}
+
+/* Show caption */
+.swiper-slide .content .caption.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Swiper button styles */
+[class^="swiper-button-"] {
+    width: 44px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Swiper prev button styles */
+.swiper-button-prev {
+    transform: translateX(50px);
+}
+
+/* Swiper next button styles */
+.swiper-button-next {
+    transform: translateX(-50px);
+}
+
+/* navbar responsive */
