@@ -5,14 +5,35 @@
     margin: 0;
     padding: 0;
 }
-html{
+
+html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: #ccc;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #acc6aa;
+    border-radius: 5rem;
 }
 
 /* Section 1 */
 .navbar {
+    position: fixed;
+    top: 0;left: 0; right: 0;
+    z-index: 10000;
     align-items: center;
     background-color: #f2f2f2;
+    border-bottom: 1px solid #ccc;
+
 }
 
 li,
@@ -29,7 +50,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10%;
+    padding: 1.5rem 10%;
+
 }
 
 .logo {
@@ -90,12 +112,13 @@ button:hover {
 
 .About {
     width: 100%;
-    height: 12vh;
+    height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: black;
     border-bottom: 1px solid #ccc;
+    padding-top: 5.6rem;
 }
 
 /* Text Animation */
@@ -182,11 +205,12 @@ button:hover {
 }
 
 /* Section 4 */
-.Gallery{
+.Gallery {
     width: 100%;
     height: 55vh;
     text-align: center;
     background-color: #f2f2f2;
     border-bottom: 1px solid #ccc;
 }
+
 /* navbar responsive */
