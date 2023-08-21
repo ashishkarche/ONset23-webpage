@@ -43,7 +43,61 @@ body {
 }
 
 section {
-    padding: 2rem 9%;
+    padding: 4rem 9%;
+}
+
+/* Horizontal Scrolling Animation */
+
+.container{
+    background-color: #333;
+    top: 6rem;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    position: fixed;
+    padding: 10px ; 
+    border-bottom: 2px solid #222;
+    border-top: 2px solid #222;
+}
+.container .scrolling-container {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    animation: scrollText 30s linear infinite;
+    display: flex;
+    gap: 15%;
+}
+
+.container .scrolling-container .scrolling-content {
+    display: inline-block;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+
+}
+.container .scrolling-container .scrolling-content a{
+    color: var(--main-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: underline;
+}
+.container .scrolling-container .scrolling-content span{
+    justify-content: space-between;
+    color: #ff0033;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 .heading {
@@ -74,6 +128,7 @@ section {
 .btn:hover {
     background: var(--main-color);
 }
+
 
 .header {
     position: fixed;
@@ -249,75 +304,78 @@ section {
     color: var(--main-color);
 }
 
-.committee .box{
+.committee .box {
     border-radius: .5rem;
     background: #333;
     padding: 2rem;
     position: relative;
 }
 
-.committee .box .user{
+.committee .box .user {
     display: flex;
     align-items: center;
     gap: 1.5rem;
     padding-bottom: 1rem;
 }
 
-.committee .box .user img{
+.committee .box .user img {
     height: 7rem;
     width: 7rem;
     border-radius: 50%;
     object-fit: cover;
 }
-.committee .box .user h3{
+
+.committee .box .user h3 {
     font-size: 2rem;
     color: #fff;
 }
-.committee .box .user span{
+
+.committee .box .user span {
     font-size: 1.5rem;
     color: #eee;
 }
-.committee .box .user .ctn{
+
+.committee .box .user .ctn {
     color: var(--main-color);
     cursor: help;
 }
 
 
-.footer{
+.footer {
     background: #111;
 
 }
 
-.footer .box-container{
+.footer .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 1.5rem;
 }
 
-.footer .box-container .box h3{
+.footer .box-container .box h3 {
     font-size: 2.5rem;
     padding: 1rem 0;
     color: #fff;
 }
 
-.footer .box-container .box a{
+.footer .box-container .box a {
     display: block;
     font-size: 1.5rem;
     padding: 1rem 0;
     color: #eee;
 }
 
-.footer .box-container .box a i{
+.footer .box-container .box a i {
     padding-right: .5rem;
     color: var(--main-color);
 }
 
-.footer .box-container .box a:hover i{
+.footer .box-container .box a:hover i {
     padding-right: .5rem;
     color: #fff;
 }
 
-.footer .credit{
+.footer .credit {
     text-align: center;
     color: #fff;
     border-top: .1rem solid #222;
@@ -328,30 +386,31 @@ section {
 }
 
 
-.footer .credit span{
+.footer .credit span {
     color: var(--main-color);
 }
 
-.theme-toggler{
+.theme-toggler {
     position: fixed;
-    top: 10rem; right: -20rem;
+    top: 10rem;
+    right: -20rem;
     background: #333;
     z-index: 1000;
     width: 20rem;
     text-align: center;
 }
 
-.theme-toggler.active{
+.theme-toggler.active {
     right: 0;
 }
 
-.theme-toggler h3{
+.theme-toggler h3 {
     color: #fff;
     padding: 1rem 0;
     font-size: 2rem;
 }
 
-.theme-toggler .buttons{
+.theme-toggler .buttons {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -359,27 +418,30 @@ section {
     padding: 1rem;
 }
 
-.theme-toggler .buttons .theme-btn{
+.theme-toggler .buttons .theme-btn {
     height: 5rem;
     width: 5rem;
     border-radius: 50%;
     cursor: pointer;
 }
-.theme-toggler .toggle-btn{
+
+.theme-toggler .toggle-btn {
     position: absolute;
-    top: 0; left: -5.9rem;
+    top: 0;
+    left: -5.9rem;
     padding: 1.3rem 1.5rem;
     background: #333;
     cursor: pointer;
 }
 
-.theme-toggler .toggle-btn i{
+.theme-toggler .toggle-btn i {
     color: #fff;
     font-size: 3rem;
     animation: spin 4s linear infinite;
 }
-@keyframes spin{
-    0%{
+
+@keyframes spin {
+    0% {
         transform: rotate(360deg);
     }
 }

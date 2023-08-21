@@ -81,3 +81,14 @@ var swiper = new Swiper(".scommittee-slider", {
         disableOnInteraction: false,
     }
 });
+
+var style = document.createElement('style');
+var position = 'right';
+
+style.innerHTML = `
+@keyframes scrolls{
+    0%{${position}:-${document.querySelector('.text').offsetWidth + 10}px;}
+    100%{${position}: 100%;}
+}`;
+
+document.head.append(style);
